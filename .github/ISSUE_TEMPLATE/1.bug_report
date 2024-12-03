@@ -1,74 +1,64 @@
 name: Bug Report
-description: I had a problem using Frankly.
-labels: ['triage']
-type: Bug
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
 body:
-- type: markdown
+  - type: markdown
     attributes:
-      value: Please provide a descriptive title for this bug report.
-  - type: textarea
-    attributes:
-      label: Steps to reproduce the problem
-      description: What were you trying to do? If the problem is repeatable, how would our team be able to see the bug happen? [testing hyperlink](https://example.com)
       value: |
-        1.
-        2.
-        3.
-        ...
-    validations:
-      required: true
+        Thanks for taking the time to fill out this bug report!
   - type: input
+    id: contact
     attributes:
-      label: Expected behaviour
-      description: What should have happened?
-    validations:
-      required: true
-  - type: input
-    attributes:
-      label: Actual behaviour
-      description: What happened?
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Detailed description
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
     validations:
       required: false
-  - type: input
-    attributes:
-      label: Mastodon instance
-      description: The address of the Mastodon instance where you experienced the issue
-      placeholder: mastodon.social
-    validations:
-      required: true
-  - type: input
-    attributes:
-      label: Mastodon version
-      description: |
-        This is displayed at the bottom of the About page, eg. `v4.4.0-alpha.1`
-      placeholder: v4.3.0
-    validations:
-      required: true
-  - type: input
-    attributes:
-      label: Browser name and version
-      description: |
-        What browser are you using when getting this bug? Please specify the version as well.
-      placeholder: Firefox 131.0.0
-    validations:
-      required: true
-  - type: input
-    attributes:
-      label: Operating system
-      description: |
-        What OS are you running? Please specify the version as well.
-      placeholder: macOS 15.0.1
-    validations:
-      required: true
   - type: textarea
+    id: what-happened
     attributes:
-      label: Technical details
-      description: |
-        Any additional technical details you may have. This can include the full error log, inspector's output…
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
-      required: false
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
