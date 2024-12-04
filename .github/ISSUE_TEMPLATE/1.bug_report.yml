@@ -10,9 +10,9 @@ body:
       label: Steps to reproduce the problem
       description: What were you trying to do? Try detailing each button press, input, or menu selection.
       value: |
-        1.
-        2.
-        3.
+        1. 
+        2. 
+        3. 
         ...
     validations:
       required: true
