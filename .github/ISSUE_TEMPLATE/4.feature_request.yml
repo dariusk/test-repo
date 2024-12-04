@@ -1,16 +1,13 @@
 name: Feature Request
-description: I have a suggestion
+description: I have a suggestion for a feature
 body:
   - type: markdown
     attributes:
-      value: |
-        Please use a concise and distinct title for the issue.
-
-        Consider: Could it be implemented as a 3rd party app using the REST API instead?
+      value: Please use a descriptive title for this issue.
   - type: textarea
     attributes:
       label: Pitch
-      description: Describe your idea for a feature. Make sure it has not already been suggested/implemented/turned down before.
+      description: Describe your idea for a feature!
     validations:
       required: true
   - type: textarea
