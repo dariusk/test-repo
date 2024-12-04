@@ -20,20 +20,20 @@ body:
     attributes:
       label: Expected behaviour
       description: What should have happened?
-      placeholder: Ex: I should have been able to create a new account
+      placeholder: "Ex: I should have been able to create a new account"
     validations:
       required: true
   - type: input
     attributes:
       label: Actual behaviour
       description: What happened?
-      placeholder: Ex: I got an error message when trying to create a new account
+      placeholder: "Ex: I got an error message when trying to create a new account"
     validations:
       required: true
   - type: textarea
     attributes:
       label: Additional details
-      description: _Hint: you can drag and drop files and screenshots here, or use the attachment button._
+      description: "_Hint: you can drag and drop files and screenshots here, or use the attachment button._"
     validations:
       required: false
   - type: input
