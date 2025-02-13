@@ -13,6 +13,5 @@ body:
   - type: textarea
     attributes:
       label: Motivation
-      description: Why do you think this feature is needed? Who would benefit from it?
-    validations:
+      description: What problem does this feature solve? Why do you think it's needed? Who would benefit from it?    validations:
       required: true
